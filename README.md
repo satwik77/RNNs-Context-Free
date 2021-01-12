@@ -23,6 +23,7 @@ We investigate the ability of recurrent models to learn and generalize on Dyck l
 
 Dyck languages and (deterministic) CFLs can be recognized by (deterministic) pushdown automata (PDA). We construct an RNN that directly simulates a PDA given unbounded precision. A key observation is that the higher the depth of the stack the higher is the required precision. This implies that fixed precision RNNs are expressive enough to recognize strings of arbitrary lengths if the required depth of the stack is bounded. Based on this observation, we test the hypothesis whether LSTMs can generalize to higher lengths if the depth of the inputs in the training and test set is bounded by the same value. In the bounded depth setting, LSTMs are able to generalize to much higher lengths compared to the lengths used during training. Given that natural languages in practical settings also contain nested dependencies of bounded depths, this may help explain why LSTMs perform well in modeling natural language corpora containing nested dependencies.
 
+For any clarification, comments, or suggestions please contact [Satwik](https://satwikb.com/) or [Kabir](https://github.com/kabirahuja2431).
 
 
 <h2 align="center">
