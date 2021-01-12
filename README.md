@@ -23,8 +23,6 @@ We investigate the ability of recurrent models to learn and generalize on Dyck l
 
 Dyck languages and (deterministic) CFLs can be recognized by (deterministic) pushdown automata (PDA). We construct an RNN that directly simulates a PDA given unbounded precision. A key observation is that the higher the depth of the stack the higher is the required precision. This implies that fixed precision RNNs are expressive enough to recognize strings of arbitrary lengths if the required depth of the stack is bounded. Based on this observation, we test the hypothesis whether LSTMs can generalize to higher lengths if the depth of the inputs in the training and test set is bounded by the same value. In the bounded depth setting, LSTMs are able to generalize to much higher lengths compared to the lengths used during training. Given that natural languages in practical settings also contain nested dependencies of bounded depths, this may help explain why LSTMs perform well in modeling natural language corpora containing nested dependencies.
 
-For any clarification, comments, or suggestions please contact [Satwik](https://satwikb.com/) or [Kabir](https://github.com/kabirahuja2431).
-
 
 <h2 align="center">
   <img align="center"  src="./images/plots.png" alt="..." width="550">
@@ -129,3 +127,6 @@ Here,
 In this specific example Dyck-2 strings will be generated with training data containing 10k examples, with the length of the strings lying in the interval [2, 50] and depths in the interval [1, 10]. Apart from that there will be 3 validation bins generated each with 1000 points. Bin-0 will have same length and depth specifications as the training set. Bin-1 will have lengths in the range [52, 100] and depths in [11, 20], and Bin-2 will have lengths and depths in the ranges [100, 150] and [20, 30] respectively.
 
 *Also note that we provide the code to generate a variety of languages like Shuffle, Tomita, Parity etc. which we didn't particularly deal in the paper. Data generation parameters of these languages will be slightly different, so be careful if you wish to generate data for those languages.*
+
+For any clarification, comments, or suggestions please contact [Satwik](https://satwikb.com/) or [Kabir](https://github.com/kabirahuja2431).
+
